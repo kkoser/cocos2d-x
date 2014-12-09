@@ -199,35 +199,51 @@
 }
 
 
-//! TODO: THE DELEGATES
-//#pragma mark - UIWebViewDelegate
-//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-//    NSString *url = [[request URL] absoluteString];
-//    if ([[[request URL] scheme] isEqualToString:self.jsScheme]) {
-//        self.onJsCallback([url UTF8String]);
-//        return NO;
-//    }
-//    if (self.shouldStartLoading && url) {
-//        return self.shouldStartLoading([url UTF8String]);
-//    }
-//    return YES;
-//}
-//
-//- (void)webViewDidFinishLoad:(UIWebView *)webView {
-//    if (self.didFinishLoading) {
-//        NSString *url = [[webView.request URL] absoluteString];
-//        self.didFinishLoading([url UTF8String]);
-//    }
-//}
-//
-//- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-//    if (self.didFailLoading) {
-//        NSString *url = error.userInfo[NSURLErrorFailingURLStringErrorKey];
-//        if (url) {
-//            self.didFailLoading([url UTF8String]);
-//        }
-//    }
-//}
+#pragma mark - Delegates
+// From WebPolicyDelegate
+- (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id<WebPolicyDecisionListener>)listener {
+    
+    if ([actionInformation[WebActionNavigationTypeKey] intValue] == WebNavigationTypeOther) {
+        [listener use];
+        
+    } else {
+        
+        NSString *url = [[request URL] absoluteString];
+        if ([[[request URL] scheme] isEqualToString:self.jsScheme]) {
+            self.onJsCallback([url UTF8String]);
+            [listener ignore];
+            return;
+        }
+        if (self.shouldStartLoading && url) {
+            if (self.shouldStartLoading([url UTF8String])) {
+                [listener use];
+                return;
+            } else {
+                [listener ignore];
+                return;
+            }
+        }
+        
+        [listener use];
+    }
+}
+
+// From WebFrameLoadDelegate
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
+    if (self.didFinishLoading) {
+        NSString *url = [[frame.dataSource.request URL] absoluteString];
+        self.didFinishLoading([url UTF8String]);
+    }
+}
+
+- (void)webView:(WebView *)webView didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+    if (self.didFailLoading) {
+        NSString *url = error.userInfo[NSURLErrorFailingURLStringErrorKey];
+        if (url) {
+            self.didFailLoading([url UTF8String]);
+        }
+    }
+}
 
 @end
 
