@@ -30,3 +30,10 @@
 #include "UIWebView-inl.h"
 
 #endif
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
+
+#include "UIWebViewImpl-osx.h"
+#include "UIWebView-inl.h"
+
+#endif

@@ -717,6 +717,9 @@
 		29AFEF6719ACCAA000F6B10A /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 29AFEF6619ACCAA000F6B10A /* Test.html */; };
 		29FBBBFE196A9ECD00E65826 /* CocostudioParserJsonTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29FBBBFC196A9ECD00E65826 /* CocostudioParserJsonTest.cpp */; };
 		29FBBBFF196A9ECD00E65826 /* CocostudioParserJsonTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29FBBBFC196A9ECD00E65826 /* CocostudioParserJsonTest.cpp */; };
+		2EB112001A36974300EA5090 /* UIWebViewTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 298D7F6D19AC31F300FF096D /* UIWebViewTest.cpp */; };
+		2EB112021A36994F00EA5090 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB112011A36994F00EA5090 /* WebKit.framework */; };
+		2EB112031A36999800EA5090 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = 29AFEF6619ACCAA000F6B10A /* Test.html */; };
 		3825CC491A2C982A00C92EA8 /* CustomRootNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3825CC431A2C982A00C92EA8 /* CustomRootNode.cpp */; };
 		3825CC4A1A2C982A00C92EA8 /* CustomRootNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3825CC431A2C982A00C92EA8 /* CustomRootNode.cpp */; };
 		3825CC4B1A2C982A00C92EA8 /* CustomRootNodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3825CC451A2C982A00C92EA8 /* CustomRootNodeReader.cpp */; };
@@ -1654,6 +1657,7 @@
 		29AFEF6619ACCAA000F6B10A /* Test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Test.html; path = "../tests/cpp-tests/Resources/Test.html"; sourceTree = "<group>"; };
 		29FBBBFC196A9ECD00E65826 /* CocostudioParserJsonTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocostudioParserJsonTest.cpp; sourceTree = "<group>"; };
 		29FBBBFD196A9ECD00E65826 /* CocostudioParserJsonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocostudioParserJsonTest.h; sourceTree = "<group>"; };
+		2EB112011A36994F00EA5090 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3825CC431A2C982A00C92EA8 /* CustomRootNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomRootNode.cpp; sourceTree = "<group>"; };
 		3825CC441A2C982A00C92EA8 /* CustomRootNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRootNode.h; sourceTree = "<group>"; };
 		3825CC451A2C982A00C92EA8 /* CustomRootNodeReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomRootNodeReader.cpp; sourceTree = "<group>"; };
@@ -1890,6 +1894,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB112021A36994F00EA5090 /* WebKit.framework in Frameworks */,
 				1AAF534D180E2F4E000584C8 /* libcocos2d Mac.a in Frameworks */,
 				EDCC747F17C455FD007B692C /* IOKit.framework in Frameworks */,
 				1A9F808D177E98A600D9A1CB /* libcurl.dylib in Frameworks */,
@@ -3671,6 +3676,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EB112011A36994F00EA5090 /* WebKit.framework */,
 				15EE465A19A7200300AF29F1 /* libcurl.a */,
 				15CBA9DC196EEAA6005877BB /* libz.dylib */,
 				15CBA9DA196EEA90005877BB /* CoreMotion.framework */,
@@ -4402,6 +4408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB112031A36999800EA5090 /* Test.html in Resources */,
 				1AC35CFE18CED84500F37B72 /* Particles in Resources */,
 				1AC35CF418CED84500F37B72 /* Images in Resources */,
 				1AC35CE018CED84500F37B72 /* configs in Resources */,
@@ -4711,6 +4718,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB112001A36974300EA5090 /* UIWebViewTest.cpp in Sources */,
 				3825CC491A2C982A00C92EA8 /* CustomRootNode.cpp in Sources */,
 				1AC35B3118CECF0C00F37B72 /* GLES-Render.cpp in Sources */,
 				29080DE1191B595E0066F8DF /* UITextTest_Editor.cpp in Sources */,

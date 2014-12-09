@@ -1179,6 +1179,8 @@
 		299CF1FC19A434BC00C378C1 /* ccRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 299CF1F919A434BC00C378C1 /* ccRandom.cpp */; };
 		299CF1FD19A434BC00C378C1 /* ccRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 299CF1FA19A434BC00C378C1 /* ccRandom.h */; };
 		299CF1FE19A434BC00C378C1 /* ccRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 299CF1FA19A434BC00C378C1 /* ccRandom.h */; };
+		2EB111FC1A368E2C00EA5090 /* UIWebViewImpl-osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EB111FA1A368E2C00EA5090 /* UIWebViewImpl-osx.h */; };
+		2EB111FD1A368E2C00EA5090 /* UIWebViewImpl-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EB111FB1A368E2C00EA5090 /* UIWebViewImpl-osx.mm */; };
 		382383EE1A258FA7002C4610 /* flatbuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 382383E41A258FA7002C4610 /* flatbuffers.h */; };
 		382383EF1A258FA7002C4610 /* flatbuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 382383E41A258FA7002C4610 /* flatbuffers.h */; };
 		382383F01A258FA7002C4610 /* flatc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 382383E51A258FA7002C4610 /* flatc.cpp */; };
@@ -2365,6 +2367,9 @@
 		29CB8F4B1929D1BB00C841D6 /* UILayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutManager.h; sourceTree = "<group>"; };
 		29E99D1C1957BA7000046604 /* CocoLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocoLoader.cpp; sourceTree = "<group>"; };
 		29E99D1D1957BA7000046604 /* CocoLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoLoader.h; sourceTree = "<group>"; };
+		2EB111FA1A368E2C00EA5090 /* UIWebViewImpl-osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebViewImpl-osx.h"; sourceTree = "<group>"; };
+		2EB111FB1A368E2C00EA5090 /* UIWebViewImpl-osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIWebViewImpl-osx.mm"; sourceTree = "<group>"; };
+		2EB111FE1A3694BF00EA5090 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		373B910718787C0B00198F86 /* CCComBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCComBase.h; sourceTree = "<group>"; };
 		37936A341869B76800E974DD /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		37936A351869B76800E974DD /* filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
@@ -3088,6 +3093,7 @@
 		1551A341158F2AB200E66CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EB111FE1A3694BF00EA5090 /* WebKit.framework */,
 				B217704C1977ED8B009EE11B /* libsqlite3.dylib */,
 				B217704A1977ED55009EE11B /* libcurl.dylib */,
 				B21770481977ED4C009EE11B /* libz.dylib */,
@@ -4180,6 +4186,8 @@
 		29CB8F521929D65500C841D6 /* experimental */ = {
 			isa = PBXGroup;
 			children = (
+				2EB111FA1A368E2C00EA5090 /* UIWebViewImpl-osx.h */,
+				2EB111FB1A368E2C00EA5090 /* UIWebViewImpl-osx.mm */,
 				29394CEC19B01DBA00D2DE1A /* UIWebView.h */,
 				29394CED19B01DBA00D2DE1A /* UIWebView.mm */,
 				29394CEE19B01DBA00D2DE1A /* UIWebViewImpl-ios.h */,
@@ -5438,6 +5446,7 @@
 				50ABBDA11925AB4100A911A9 /* CCGroupCommand.h in Headers */,
 				29394CF019B01DBA00D2DE1A /* UIWebView.h in Headers */,
 				15AE186519AAD31D00C27E9E /* CDOpenALSupport.h in Headers */,
+				2EB111FC1A368E2C00EA5090 /* UIWebViewImpl-osx.h in Headers */,
 				15AE1B5C19AADA9900C27E9E /* UITextAtlas.h in Headers */,
 				1A5702FC180BCE750088DEC7 /* CCTMXXMLParser.h in Headers */,
 				15AE1B6019AADA9900C27E9E /* UITextField.h in Headers */,
@@ -6232,6 +6241,7 @@
 				5027253C190BF1B900AAF4ED /* cocos2d.cpp in Sources */,
 				50ABC0611926664800A911A9 /* CCCommon-mac.mm in Sources */,
 				50ABBDB11925AB4100A911A9 /* ccShaders.cpp in Sources */,
+				2EB111FD1A368E2C00EA5090 /* UIWebViewImpl-osx.mm in Sources */,
 				15AE198219AAD36400C27E9E /* WidgetReader.cpp in Sources */,
 				46A170EF1807CECA005B8026 /* CCPhysicsWorld.cpp in Sources */,
 				15AE18E419AAD35000C27E9E /* CCActionFrame.cpp in Sources */,
